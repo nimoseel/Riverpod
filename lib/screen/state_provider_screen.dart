@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:r_study/layout/default_layout.dart';
-import 'package:r_study/riverpod/state_provider_screen.dart';
+import 'package:r_study/riverpod/state_provider.dart';
 
 class StateProviderScreen extends ConsumerWidget {
   const StateProviderScreen({Key? key}) : super(key: key);
