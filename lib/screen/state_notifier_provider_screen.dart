@@ -16,8 +16,14 @@ class StateNotifierProviderScreen extends ConsumerWidget {
       body: ListView(
         children: state
             .map(
-              (e) => Text(
-                e.name,
+              (e) => CheckboxListTile(
+                title: Text(e.name),
+                value: e.hasBought,
+                onChanged: (value) {
+                  ref.read(shoppingListProvider.notifier).toggleHasBought(
+                        name: e.name,
+                      );
+                },
               ),
             )
             .toList(),
