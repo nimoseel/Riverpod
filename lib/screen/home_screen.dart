@@ -3,6 +3,7 @@ import 'package:r_study/layout/default_layout.dart';
 import 'package:r_study/screen/auto_dispose_modifier_screen.dart';
 import 'package:r_study/screen/family_modifier_screen.dart';
 import 'package:r_study/screen/future_provider_screen.dart';
+import 'package:r_study/screen/listen_provider_screen.dart';
 import 'package:r_study/screen/state_notifier_provider_screen.dart';
 import 'package:r_study/screen/state_provider_screen.dart';
 import 'package:r_study/screen/stream_provider_screen.dart';
@@ -75,6 +76,16 @@ class HomeScreen extends StatelessWidget {
               );
             },
             child: Text('AutoDisposeModifierScreen'),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (_) => ListenProviderScreen(),
+                ),
+              );
+            },
+            child: Text('ListenProviderScreen'),
           ),
         ],
       ),
