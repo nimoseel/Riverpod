@@ -58,3 +58,20 @@ int gStateMultiply(
 }) {
   return number1 * number2;
 }
+
+@riverpod
+class GStateNotifier extends _$GStateNotifier{
+  // StateNotifier를 Provider로 만들 때 그 코드들을 riverpod에서 자동으로 생성
+  @override
+  int build(){
+    return 0; // StateNotifier 클래스의 기본 상태값 = 0
+  }
+
+  increment(){
+    state ++;
+  }
+
+  decrement(){
+    state--;
+  }
+}
